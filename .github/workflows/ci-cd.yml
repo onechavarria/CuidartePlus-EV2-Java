@@ -1,4 +1,4 @@
-name: EV2 Java CI CD
+name: CuidartePlus - DevSecOps CI/CD
 
 on:
   push:
