@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/cuidarteplus}
+    username: ${POSTGRES_USER:cuidarte}
+    password: ${POSTGRES_PASSWORD:cuidarteplus}
+    hikari:
+      connection-timeout: 5000
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
